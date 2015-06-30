@@ -16,11 +16,13 @@ post '/login' do
 
 	user = User.find_by(username: params[:username])
 	if user.password == params[:password]
+		#we need to set a session for the current user
 		p 'success'
 	else
-		p 'failure'
+		#render the login page again with errors displayed
+		@error = 'Your username or password are invalid.'
+		erb :login
 	end
-	'Login post'
 end
 
 get '/logout' do

@@ -1,13 +1,12 @@
 <div class="container">
-
+<% if @error%>
+	<div class='well' >
+		<%= @error %>
+	</div>
+<% end %>
 	<form method='POST' action='/login'>
-		
 		<input type="text" placeholder='Username' name="username">
-		
-		
-		
 		<input type="password" placeholder='Password' name="password">
-
 		<input type='submit' value='Clock In' class='btn btn-primary'>
 	</form>
 </div>
