@@ -36,3 +36,20 @@ get '/logout' do
   redirect '/'
 end
 
+get '/signup' do
+	if current_user
+		redirect '/'
+	else
+		erb :signup
+	end
+end
+
+post '/users' do
+	if params[:password] == params[:verify_password]
+		new_user = User.new(username: params[:username], password: params[:password])
+		p new_user
+	else
+		@errors = ['Your passwords don\'t match']
+		erb :signup
+	end
+end

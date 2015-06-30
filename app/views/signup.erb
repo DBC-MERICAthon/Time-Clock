@@ -1,0 +1,16 @@
+<div class="container">
+<% if @errors%>
+	<div class='well' >
+		<% @errors.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	</div>
+<% end %>
+	<form method='POST' action='/users'>
+		<input type="text" placeholder='Username' name="username">
+		<input type="password" placeholder='Password' name="password">
+		<input type="password" placeholder='Verify Password' name="verify_password">
+		<input type='submit' value='Complete Sign Up' class='btn btn-success'>
+	</form>
+	<a href="/login" class='btn btn-primary'>Log In</a>
+</div>
