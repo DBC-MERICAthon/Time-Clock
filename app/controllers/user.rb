@@ -1,12 +1,16 @@
 get '/' do
   # If they aren't logged in, redirect to login
   # Else, show them the clock in page
-  return '<h1>It works</h1>'
+  erb :test
 end
 
 get '/login' do
+	if current_user
+	  redirect '/'
+	else
+ 	 erb :login
+	end
   # Show the login page
-  erb :login
 end
 
 post '/login' do
@@ -15,9 +19,11 @@ post '/login' do
   # check password
 
 	user = User.find_by(username: params[:username])
-	if user.password == params[:password]
+	if user.password == params[:password] && user
 		#we need to set a session for the current user
-		p 'success'
+		#p 'success'
+		session[:user_id] = user.id
+		redirect '/'
 	else
 		#render the login page again with errors displayed
 		@error = 'Your username or password are invalid.'
@@ -26,6 +32,7 @@ post '/login' do
 end
 
 get '/logout' do
-  # Log them out
+  session[:user_id] = nil
+  redirect '/'
 end
 
