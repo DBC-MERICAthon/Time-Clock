@@ -1,7 +1,13 @@
 <% if current_user %>
-	<h1>Welcome: <%= current_user.username%></h1>
-
-	<a href="/logout" class='btn btn-danger'>Logout</a>
+<h1>Welcome: <%= current_user.username%></h1>
+	<% if @questions %>
+		<select>
+		<% @questions.each do |question| %>
+			<option value='<%= question.id%>'><%= question.content %></option> 
+		<% end %>
+		</select>
+	<%end %>
+<a href="/logout" class='btn btn-danger'>Logout</a>
 <% else %>
 <h1>You're not logged in</h1>
 <a href="/login" class='btn btn-warning'>Login</a>

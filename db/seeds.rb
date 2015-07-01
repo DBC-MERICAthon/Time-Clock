@@ -8,6 +8,10 @@ Question.create(content: 'What\'s your first memory of your granparents?')
 Question.create(content: 'What was your first car?')
 Question.create(content: 'Who was your first date?')
 
+File.open('draft_questions.txt').each do |f|
+		Question.create(content: f.chomp)
+end
+
 Answer.create(user_id: 1, question_id: 1, content: 'Berkeley, CA')
 Answer.create(user_id: 2, question_id: 1, content: 'San Jose, CA')
 Answer.create(user_id: 3, question_id: 1, content: 'San Francisco, CA')
