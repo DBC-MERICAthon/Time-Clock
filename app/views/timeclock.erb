@@ -1,7 +1,7 @@
 <div class="container">
   <div class="timebox">
     <h1><%= Time.now.strftime("%A %B %d, %Y") %></h1>
-    <h2><%= Time.now.strftime("%H:%m") %></h2>
+    <h2><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <%= Time.now.strftime("%H:%m") %></h2>
   </div>
 
   <div id="photo-box" class="center-block">
@@ -21,7 +21,7 @@
         <option class="question" question-id="<%= question.id %>"><%= question.content %></option>
       <% end %>
     <% end %>
-    <p><a class="next-question" href="">Next</a></p>
+    <p><a class="next-question" href=""><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></a></p>
   </div>
 
   <div class="text-center">
@@ -35,9 +35,7 @@
       <% end %>
       <br/>
       <br/>
-      <input class="btn btn-success" type="submit" value="Finish" />
+      <input class="btn btn-primary" type="submit" value="Clock In" />
     </form>
   </div>
-
-
 </div>

@@ -1,12 +1,9 @@
 get '/photos' do
-
   @photos = Photo.where(user_id: current_user.id)
   erb :photos
 end
 post '/photos' do
   # save a photo
-  p params
-
   photo = Photo.new(
     user_id: current_user.id,
     path: params[:path],

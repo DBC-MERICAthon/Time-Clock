@@ -35,6 +35,8 @@ var snapPhoto = function(){
     context.drawImage(video, 0, 0, 640, 480);
     $('.snap-wrap').toggle();
     $('.save-wrap').toggle();
+    $('.save-wrap').animate({opacity: '0'}, 'fast');
+    $('.save-wrap').animate({opacity: '1'}, 'fast');
   });
 
 
@@ -45,7 +47,6 @@ var savePhoto = function() {
   button.addEventListener('click', function (e) {
       var dataURL = canvas.toDataURL('image/png');
       button.href = dataURL;
-      // Photo.new(path: dataURL)
       var data = {path: dataURL}
 
       request = $.ajax({
@@ -71,7 +72,6 @@ var questionListener = function() {
 
   $('.question-box').on('click','.next-question', function(event){
     event.preventDefault()
-    console.log("You clicked the next button")
     active = $('.active-question')
     if(active.html() == $('.question').last().html()){
       next = $('.question').first()

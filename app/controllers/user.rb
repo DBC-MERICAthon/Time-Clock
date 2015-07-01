@@ -1,7 +1,7 @@
 get '/' do
   if current_user
     @answered_question = current_user.questions.pluck(:id)
-    @questions = Question.where.not(id: @answered_question)
+    @questions = Question.where.not(id: @answered_question).sample(3)
     erb :timeclock
   else
     redirect '/login'
@@ -14,7 +14,6 @@ get '/login' do
   else
     erb :login
   end
-  # Show the login page
 end
 
 post '/login' do
