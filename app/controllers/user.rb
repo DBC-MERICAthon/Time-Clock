@@ -1,6 +1,7 @@
 get '/' do
   # If they aren't logged in, redirect to login
   # Else, show them the clock in page
+  @questions = Question.all.sample(3)
   erb :test
 end
 
@@ -59,3 +60,4 @@ post '/users' do
 		erb :signup
 	end
 end
+
