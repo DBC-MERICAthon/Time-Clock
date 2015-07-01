@@ -1,14 +1,20 @@
 <div class="container">
-  <h1><%= Date.today %></h1>
-  <h2><%= Time.now %></h2>
-  <div class="photo-box">
-    Photo goes here
+  <div class="timebox">
+    <h1><%= Time.now.strftime("%A %B %d, %Y") %></h1>
+    <h2><%= Time.now.strftime("%H:%m") %></h2>
   </div>
-  <div class="biography">
-    <select class="" name="">
 
-    </select>
+  <div class="photo-box">
   </div>
+
+  <div class="question">
+    Question
+  </div>
+
+  <div class="text col-md-8 col-md-offset-4">
+    <textarea>Type your answer here</textarea>
+  </div>
+
   <div class="finish">
     <a class="btn btn-success" href="#">Finish</a>
   </div>
