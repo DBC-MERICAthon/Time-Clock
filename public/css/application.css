@@ -1,0 +1,13 @@
+form {
+	margin-bottom: 15px;
+}
+
+form input {
+
+	display: block;
+	margin-bottom: 15px;
+}
+
+form input.btn {
+	text-align: center;
+}
