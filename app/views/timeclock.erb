@@ -7,8 +7,13 @@
   <div class="photo-box">
   </div>
 
-  <div class="question">
-    Question
+  <div class="question-box">
+    <% if @questions %>
+      <% @questions.each do |question| %>
+        <p class="question"><%= question.content %></p>
+      <% end %>
+    <% end %>
+    <p><a class="next-photo" href="">Next</a></p>
   </div>
 
   <div class="text col-md-8 col-md-offset-4">

@@ -10,6 +10,7 @@ form input {
 
 form input.btn {
 	text-align: center;
+}
 
 .container .timebox {
   text-align: center;
@@ -40,6 +41,9 @@ textarea {
   padding-left: 0px;
 }
 
-.container .question {
+.container .question-box {
   text-align: center
+}
+.container .question {
+	display: none;
 }
