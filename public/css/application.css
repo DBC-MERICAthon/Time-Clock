@@ -90,6 +90,9 @@ textarea {
 .time-spent {
   text-align: center;
 }
-#photo-box > * {
+#photo-box > * > * {
   margin-bottom: 15px;
+}
+.save-wrap {
+  display: none;
 }

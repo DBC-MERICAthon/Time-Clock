@@ -1,15 +1,8 @@
 $(document).ready(function() {
-
   questionListener();
   snapPhoto();
   savePhoto();
 });
-
-var workingTime = function() {
-  var newDate = $('.start-time').text().prettyDate();
-  console.log(newDate);
-  $('.start-time').text(newDate);
-};
 
 var snapPhoto = function(){
   var canvas = document.getElementById("canvas"),
@@ -40,20 +33,10 @@ var snapPhoto = function(){
   };
   $('#photo-box').on('click','#snap', function(event){
     context.drawImage(video, 0, 0, 640, 480);
-    $('#video').toggle();
-    $('#snap').toggle();
+    $('.snap-wrap').toggle();
+    $('.save-wrap').toggle();
   });
-  // document.getElementById("snap").addEventListener("click",
-  //   function() {
-  //     context.drawImage(video, 0, 0, 640, 480);
-  //     $('#video').toggle();
-  //     $('#snap').text('Retake')
-  //     $('#snap').addClass('retake')
-  //   });
 
-  $('#photo-box').on('click','.retake', function(event){
-    console.log('Clicked on retake button')
-  });
 
 };
 
@@ -71,7 +54,8 @@ var savePhoto = function() {
         data: data
       });
       request.done(function(response){
-
+        $('#btn-save').toggle();
+        $('.save-wrap').append("<button class='disabled center-block btn btn-success'>Saved!</button>");
       });
       request.fail(function(response){
 
