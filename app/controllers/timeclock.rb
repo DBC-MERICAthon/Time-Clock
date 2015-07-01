@@ -9,3 +9,7 @@ get '/working' do
   p @start_time
   erb :working
 end
+
+get '/clockout' do
+  erb :clockout
+end
