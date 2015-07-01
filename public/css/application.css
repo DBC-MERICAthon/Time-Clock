@@ -1,14 +1,14 @@
 form {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 form input {
-	display: block;
-	margin-bottom: 15px;
+  display: block;
+  margin-bottom: 15px;
 }
 
 form input.btn {
-	text-align: center;
+  text-align: center;
 }
 
 .container .timebox {
@@ -44,12 +44,12 @@ textarea {
   text-align: center;
 }
 .container .question {
-	display: none;
+  display: none;
 }
 
 .error {
-	font-weight: bold;
-	color: red;
+  font-weight: bold;
+  color: red;
 }
 
 .emojis {
@@ -89,4 +89,7 @@ textarea {
 
 .time-spent {
   text-align: center;
+}
+#photo-box > * {
+  margin-bottom: 15px;
 }

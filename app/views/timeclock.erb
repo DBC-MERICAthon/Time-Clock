@@ -4,12 +4,11 @@
     <h2><%= Time.now.strftime("%H:%m") %></h2>
   </div>
 
-  <div id="photo-box">
-    <video id="video" width="640" height="480" autoplay></video>
-    <button id="snap">Snap Photo</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
-    <button id="btn-save">Save Photo</button>
-
+  <div id="photo-box" class="center-block">
+    <video class="center-block" id="video" width="640" height="480" autoplay></video>
+    <button class="btn btn-primary center-block" id="snap">Snap Photo</button>
+    <canvas class="center-block" id="canvas" width="640" height="480"></canvas>
+    <button class="btn btn-success center-block" id="btn-save">Save Photo</button>
   </div>
 
   <div class="question-box">
