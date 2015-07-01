@@ -4,7 +4,12 @@
     <h2><%= Time.now.strftime("%H:%m") %></h2>
   </div>
 
-  <div class="photo-box">
+  <div id="photo-box">
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <button id="btn-save">Save Photo</button>
+
   </div>
 
   <div class="question-box">
@@ -27,7 +32,6 @@
       <% end %>
       <br/>
       <br/>
-      <input type='submit' value='Complete Sign Up' class='btn btn-success'>
       <input class="btn btn-success" type="submit" value="Finish" />
     </form>
   </div>

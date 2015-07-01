@@ -1,0 +1,7 @@
+<h1>All photos</h1>
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <img src="<%= photo.path %>"/>
+  <% end %>
+<% end %>
