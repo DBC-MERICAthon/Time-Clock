@@ -10,4 +10,36 @@ form input {
 
 form input.btn {
 	text-align: center;
+
+.container .timebox {
+  text-align: center;
+
+}
+
+.container .photo-box {
+  height: 250px;
+  width: 250px;
+  border: 1px solid black;
+  margin: 15px auto;
+}
+
+.container .finish {
+  width: 6%;
+  margin: 0 auto;
+  padding-bottom: 21px;
+}
+
+.container .text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 350px;
+  height: 180px;
+  padding-left: 0px;
+}
+
+.container .question {
+  text-align: center
 }

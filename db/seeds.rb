@@ -1,6 +1,6 @@
-User.create(username:'bk', password: '1234')
-User.create(username:'ek', password: '1234')
-User.create(username:'ck', password: '1234')
+User.create(username: 'bk', password: '1234')
+User.create(username: 'ek', password: '1234')
+User.create(username: 'ck', password: '1234')
 
 Question.create(content: 'Where were you born?')
 Question.create(content: 'Where did you go to high school?')
@@ -9,7 +9,7 @@ Question.create(content: 'What was your first car?')
 Question.create(content: 'Who was your first date?')
 
 File.open('draft_questions.txt').each do |f|
-		Question.create(content: f.chomp)
+  Question.create(content: f.chomp)
 end
 
 Answer.create(user_id: 1, question_id: 1, content: 'Berkeley, CA')
