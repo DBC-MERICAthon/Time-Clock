@@ -19,7 +19,8 @@ post '/login' do
   # check password
 
 	user = User.find_by(username: params[:username])
-	if user.password == params[:password] && user
+	
+	if user && user.password == params[:password] 
 		#we need to set a session for the current user
 		#p 'success'
 		session[:user_id] = user.id
@@ -47,7 +48,12 @@ end
 post '/users' do
 	if params[:password] == params[:verify_password]
 		new_user = User.new(username: params[:username], password: params[:password])
-		p new_user
+		if new_user.save
+			session[:user_id] = new_user.id
+		else
+			@errors = new_user.errors.full_messages
+			erb :signup
+		end
 	else
 		@errors = ['Your passwords don\'t match']
 		erb :signup
