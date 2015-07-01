@@ -77,7 +77,6 @@ var questionListener = function() {
 
   $('.question-box').on('click','.next-question', function(event){
     event.preventDefault()
-    console.log("You clicked the next button")
     active = $('.active-question')
     if(active.html() == $('.question').last().html()){
       next = $('.question').first()

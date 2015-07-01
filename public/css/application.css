@@ -46,8 +46,10 @@ form input.btn {
 .container textarea {
   width: 350px;
   height: 180px;
-  padding-left: 0px;
   color: black;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-size: 18px;
 }
 
 .container .question-box {
@@ -55,6 +57,8 @@ form input.btn {
 }
 .container .question {
   display: none;
+  font-weight:bold;
+  font-size: 25px;
 }
 
 .error {
@@ -111,6 +115,7 @@ form input.btn {
 .save-wrap {
   display: none;
 }
+
 .clock-wrap {
   margin-top: 30px;
   width: 480px;
@@ -119,4 +124,12 @@ form input.btn {
 }
 .clock-wrap h1 {
   margin-bottom: 35px;
+}
+
+.glyphicon {
+  vertical-align: top;
+}
+
+.finish-work {
+  margin: 20px;
 }
