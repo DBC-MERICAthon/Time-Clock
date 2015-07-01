@@ -3,13 +3,13 @@ form {
 }
 
 form input {
-
 	display: block;
 	margin-bottom: 15px;
 }
 
 form input.btn {
 	text-align: center;
+}
 
 .container .timebox {
   text-align: center;
@@ -40,6 +40,14 @@ textarea {
   padding-left: 0px;
 }
 
+.container .question-box {
+  text-align: center;
+}
 .container .question {
-  text-align: center
+	display: none;
+}
+
+.error {
+	font-weight: bold;
+	color: red;
 }

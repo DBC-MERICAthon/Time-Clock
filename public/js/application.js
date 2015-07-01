@@ -1,7 +1,27 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+$('.question').first().toggle()
+$('.question').first().addClass('active-question')
+value = $('.question').first().attr('question-id')
+$('.question_id').attr('value',value)
+
+$('.question-box').on('click','.next-question', function(event){
+  event.preventDefault()
+  console.log("You clicked the next button")
+  active = $('.active-question')
+  if(active.html() == $('.question').last().html()){
+    next = $('.question').first()
+  }
+  else {
+    next = $('.active-question').next()
+  }
+  active.toggle()
+  next.toggle()
+  active.removeClass('active-question')
+  next.addClass('active-question')
+  value = next.attr('question-id')
+  $('.question_id').attr('value',value)
+})
+
+
 });

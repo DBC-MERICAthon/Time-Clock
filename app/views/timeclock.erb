@@ -7,15 +7,29 @@
   <div class="photo-box">
   </div>
 
-  <div class="question">
-    Question
+  <div class="question-box">
+    <% if @questions %>
+      <% @questions.each do |question| %>
+        <p class="question" question-id="<%= question.id %>"><%= question.content %></p>
+      <% end %>
+    <% end %>
+    <p><a class="next-question" href="">Next</a></p>
   </div>
 
-  <div class="text col-md-8 col-md-offset-4">
-    <textarea>Type your answer here</textarea>
+  <div class="text-center">
+    <form class="" action="/answers" method="post">
+      <input type="hidden" class="question_id" name="question_id" value="">
+      <textarea name="content" placeholder="Type your answer here"></textarea>
+      <% if @errors %>
+        <% @errors.each do |error| %>
+          <p class="error"><%= error %></p>
+        <% end %>
+      <% end %>
+      <br/>
+      <br/>
+      <input class="btn btn-success" type="submit" value="Finish" />
+    </form>
   </div>
 
-  <div class="finish">
-    <a class="btn btn-success" href="#">Finish</a>
-  </div>
+
 </div>
