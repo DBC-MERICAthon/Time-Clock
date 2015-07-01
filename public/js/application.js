@@ -2,6 +2,7 @@ $(document).ready(function() {
   questionListener();
   snapPhoto();
   savePhoto();
+  drawClock();
 });
 
 var snapPhoto = function(){
@@ -87,3 +88,17 @@ var questionListener = function() {
     $('.question_id').attr('value',value)
   })
 };
+
+var calculateTime = function() {
+  console.log("bug");
+  var intTime = $('.start-time').text();
+  console.log(intTime);
+  $('.start-time').toggle();
+  return intTime;
+};
+
+var drawClock = $('.your-clock').FlipClock(calculateTime(), {
+  countdown: false,
+  autoStart: true,
+  clockFace: "HourlyCounter"
+});
