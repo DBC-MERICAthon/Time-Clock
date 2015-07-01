@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  workingTime();
 $('.question').first().toggle()
 $('.question').first().addClass('active-question')
 value = $('.question').first().attr('question-id')
@@ -25,3 +25,10 @@ $('.question-box').on('click','.next-question', function(event){
 
 
 });
+
+var workingTime = function() {
+    var newDate = $('.start-time').text().prettyDate();
+    console.log(newDate);
+    $('.start-time').text(newDate);
+};
+//prettyDate("2008-01-28T20:24:17Z")

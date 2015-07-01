@@ -3,7 +3,7 @@
 	<% if @questions %>
 		<select>
 		<% @questions.each do |question| %>
-			<option value='<%= question.id%>'><%= question.content %></option> 
+			<option value='<%= question.id%>'><%= question.content %></option>
 		<% end %>
 		</select>
 	<%end %>
@@ -12,5 +12,3 @@
 <h1>You're not logged in</h1>
 <a href="/login" class='btn btn-warning'>Login</a>
 <% end %>
-
-
