@@ -1,8 +1,5 @@
 <div class='start-time'>
-   <%= @start_time.to_i %>
-   <% Time.now %>
-   <% minutes_worked = (Time.now - @start_time) %>
-   <% minutes_seconds = minutes_worked.divmod(60) %>
-    <% hours_minutes = minutes_seconds[0] / 60 %>
-   <%= "You have been clocked in for #{hours_minutes} hours, #{minutes_seconds[0]%60} minutes, and #{minutes_seconds[1].floor} seconds." %>
+ <%= Time.now - @start_time %>
 </div>
+
+<div class="your-clock"> it exists </div>
