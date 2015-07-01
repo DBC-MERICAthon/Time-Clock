@@ -96,3 +96,12 @@ textarea {
 .save-wrap {
   display: none;
 }
+.clock-wrap {
+  margin-top: 30px;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clock-wrap h1 {
+  margin-bottom: 35px;
+}
