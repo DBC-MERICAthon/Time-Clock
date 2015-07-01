@@ -3,7 +3,6 @@ form {
 }
 
 form input {
-
 	display: block;
 	margin-bottom: 15px;
 }
@@ -42,8 +41,13 @@ textarea {
 }
 
 .container .question-box {
-  text-align: center
+  text-align: center;
 }
 .container .question {
 	display: none;
+}
+
+.error {
+	font-weight: bold;
+	color: red;
 }

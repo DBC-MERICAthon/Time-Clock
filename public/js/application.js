@@ -1,13 +1,11 @@
 $(document).ready(function() {
 
-// We have three questions
-// Grab and display (toggle) first .question inside the .question-box
-
 $('.question').first().toggle()
 $('.question').first().addClass('active-question')
+value = $('.question').first().attr('question-id')
+$('.question_id').attr('value',value)
 
-
-$('.question-box').on('click','.next-photo', function(event){
+$('.question-box').on('click','.next-question', function(event){
   event.preventDefault()
   console.log("You clicked the next button")
   active = $('.active-question')
@@ -17,11 +15,12 @@ $('.question-box').on('click','.next-photo', function(event){
   else {
     next = $('.active-question').next()
   }
-  console.log(next)
   active.toggle()
   next.toggle()
   active.removeClass('active-question')
   next.addClass('active-question')
+  value = next.attr('question-id')
+  $('.question_id').attr('value',value)
 })
 
 
