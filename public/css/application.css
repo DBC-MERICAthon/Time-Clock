@@ -51,3 +51,42 @@ textarea {
 	font-weight: bold;
 	color: red;
 }
+
+.emojis {
+  align-items: center;
+  width: 250px;
+  margin: auto;
+}
+
+.emoticon {
+  background: url(http://www.oxford.gov.uk/Direct/GovMetricFaces.jpg);
+  width: 80px;
+  height: 78px;
+  overflow: hidden;
+  display: inline-block;
+  float: center;
+}
+
+.emoticon2 {
+  background: url(http://www.oxford.gov.uk/Direct/GovMetricFaces.jpg);
+  background-position: -85px 0;
+  width: 80px;
+  height: 78px;
+  overflow: hidden;
+  display: inline-block;
+  float: center;
+}
+
+.emoticon3 {
+  background: url(http://www.oxford.gov.uk/Direct/GovMetricFaces.jpg);
+  background-position: 80px 0;
+  width: 80px;
+  height: 78px;
+  overflow: hidden;
+  display: inline-block;
+  float: center;
+}
+
+.time-spent {
+  text-align: center;
+}
