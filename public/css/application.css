@@ -5,6 +5,7 @@ body {
 .container {
   color: white;
   font-family: 'Amita', cursive;
+  /*font-family: 'Pathway Gothic One', sans-serif;*/
 }
 
 form {
@@ -14,6 +15,9 @@ form {
 form input {
   display: block;
   margin-bottom: 15px;
+}
+.container form input {
+  color: black;
 }
 
 form input.btn {
@@ -68,8 +72,8 @@ form input.btn {
 
 .emojis {
   align-items: center;
-  width: 250px;
   margin: auto;
+  overflow:hidden;
 }
 
 .emoticon {
@@ -105,7 +109,13 @@ form input.btn {
   display: inline-block;
   float: center;
 }
-
+.emoji {
+  font-size: 90px;
+  display: inline;
+}
+.emoji:hover {
+  background-color: #E76478;
+}
 .time-spent {
   text-align: center;
 }
@@ -132,4 +142,15 @@ form input.btn {
 
 .finish-work {
   margin: 20px;
+}
+
+.container .btn-success {
+  color: #fff;
+  background-color: #E76478;
+  border-color: #E76478;
+}
+.container .btn-success:hover {
+  color: #fff;
+  background-color: #994250;
+  border-color: #994250;
 }

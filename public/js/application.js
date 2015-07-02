@@ -2,13 +2,21 @@ $(document).ready(function() {
   questionListener();
   snapPhoto();
   savePhoto();
+  reflectionListener();
 
   $('.your-clock').FlipClock(calculateTime(), {
     countdown: false,
     autoStart: true,
     clockFace: "HourlyCounter"
   });
+
 });
+
+var reflectionListener = function(){
+  $('.reflection-wrap').on('click','.emoji', function(event){
+
+  })
+}
 
 var snapPhoto = function(){
   if ($('#canvas').length > 0){
