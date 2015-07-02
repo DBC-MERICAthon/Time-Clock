@@ -2,12 +2,14 @@
   <div class='start-time'>
    <%= Time.now - @start_time %>
   </div>
-
-  <div class="clock-wrap text-center">
+  <div class='somethingunique'>
     <h1>You've been working</h1>
+  </div>
+  <div class="clock-wrap text-center">
+
     <div class='your-clock'></div>
   </div>
-  <div class='finish-work text-center'>
-    <a class='btn btn-primary' href='/clockout'>Finish the day</a>
+  <div class='finish-work text-center' >
+    <a class='btn btn-primary btn-lg somethingunique' href='/clockout'>Finish the day</a>
   </div>
 </div>

@@ -1,6 +1,6 @@
 body {
   background-color: #60B4A0 !important;
-  }
+}
 
 .container {
   color: white;
@@ -20,9 +20,10 @@ form input.btn {
   text-align: center;
 }
 
-.container .timebox {
+.timebox {
   text-align: center;
-
+  color: white;
+  font-family: 'Amita', cursive;
 }
 
 .container .photo-box {
@@ -132,4 +133,17 @@ form input.btn {
 
 .finish-work {
   margin: 20px;
+}
+
+
+.finish-work .btn {
+  width: 40%;
+    height: 50px;
+    font-family: Arial;
+    font-size: 25px;
+}
+
+.somethingunique h1 {
+  font-size: 8em;
+  text-align: center;
 }
