@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 var reflectionListener = function(){
   $('.reflection-wrap').on('click','.emoji', function(event){
-
+    $(this).css('background-color','#E76478')
   })
 }
 
