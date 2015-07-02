@@ -1,26 +1,16 @@
 <div class="container">
-  <div class="timebox">
-    <h1><%= Time.now.strftime("%A %B %d, %Y") %></h1>
-    <h2><%= Time.now.strftime("%H:%M") %></h2>
-
-
   <div class="time-spent">
-    <h1>Time spent working </h1>
-  </br>
-    <h1> How was your day?</h1>
+    <h1>How was your day?</h1>
   </div>
 
-  <div class="emojis">
-    <div class="emoticon" href="#"></div>
-    <div class="emoticon2" href="#"></div>
-    <div class="emoticon3" href="#"></div>
-  </div>
-
-</br>
-
-  <div class="text-center">
-    <form class="" action="/answers" method="post">
-      <input type="hidden" class="question_id" name="question_id" value="">
+  <div class="reflection-wrap text-center">
+    <form class="" action="/reflections" method="post">
+      <div class="emojis">
+        <div class="emoji" name="happy">&#x1F601;</div>
+        <div class="emoji" name="meh">&#x1F612;</div>
+        <div class="emoji" name="sad">&#x1F616;</div>
+      </div>
+      <input type="hidden" name="mood" value="">
       <textarea name="content" placeholder="Tell us about it"></textarea>
       <% if @errors %>
         <% @errors.each do |error| %>
@@ -32,6 +22,5 @@
       <input class="btn btn-success" type="submit" value="Finish the day" />
     </form>
   </div>
-
 
 </div>
